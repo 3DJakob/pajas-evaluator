@@ -27,9 +27,21 @@ div.container {
   background-color: white;
   padding: 50px;
   border-radius: 3px;
+  justify-content: center;
+
+  height: 200px;
+  width: 400px;
 }
 
-.container input {
+div#container1 {
+  display: flex;
+}
+
+div#container2 {
+  display: none;
+}
+
+input {
   display: none;
 }
 
@@ -46,12 +58,16 @@ div.container {
 label {
   background-color: red;
   border-radius: 3px;
-  line-height: 50px;
+  padding: 20px;
   color: #fff;
 
   cursor: pointer;
 }
 
-input[type=checkbox]:checked ~ h1{
-  /*CSS Animation here!*/
+input[type=checkbox]:checked ~ #container1{
+  display: none;
+}
+
+input[type=checkbox]:checked ~ #container2{
+  display: flex;
 }
